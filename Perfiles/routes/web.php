@@ -20,3 +20,9 @@ Route::get('/roles/crear','RoleController@crear')->name('crearRol');
 Route::post('/roles/guardar','RoleController@guardar')->name('guardarRol');
 //usuarios
 Route::get('/usuarios','usuarioController@index')->name('usuarios');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+//Docentes
+Route::get('docentes','DocenteController@index');
